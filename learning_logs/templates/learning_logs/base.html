@@ -2,7 +2,8 @@
 <a href="{% url 'learning_logs:index' %}">Learning Log</a> -
 <a href="{% url 'learning_logs:topics' %}">Topics </a> - 
 {% if user.is_authenticated %} 
-    Hello, {{ user.username }}. 
+    Hello, {{ user.username }}.
+    <a href="{% url 'users:logout' %}">Log out</a> 
 {% else %}
     <a href="{% url 'users:login' %}">Log in</a>
 {% endif %}
@@ -10,5 +11,5 @@
 
 {% block content %}{% endblock content %}
 
-#Auto formatter formats the indentation and spaces which causes error 
-#So DONOT format the spaces and indentation
+<!-- Auto formatter formats the indentation and spaces which causes error  -->
+<!-- So DONOT format the spaces and indentation -->
